@@ -1,13 +1,13 @@
 import { Helmet } from 'react-helmet';
-import HomePage from '../components/HomePage/HomePage';
+import RegisterPage from '../components/Register/RegisterPage';
 
 export default function Login() {
   return (
     <div>
       <Helmet>
-        <title>Home</title>
+        <title>Registration</title>
       </Helmet>
-      <HomePage />
+      <RegisterPage />
     </div>
   );
 }
