@@ -17,7 +17,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import RestrictedRoute from './RestrictedRoute';
 import LoginPage from './LoginPage/LoginPage';
-import SignUpPage from './SignUpPage/SignUpPage';
+import RegisterPage from './RegisterPage/RegisterPage';
 import PrivateRoute from './PrivateRoute';
 
 export const App = () => {
@@ -39,7 +39,7 @@ export const App = () => {
         </Route>
         <Route element={<RestrictedRoute />}>
           <Route path="login" element={<LoginPage />} />
-          <Route path="signup" element={<SignUpPage />} />
+          <Route path="register" element={<RegisterPage />} />
         </Route>
         <Route element={<PrivateRoute />}>
           {/* <Route path="contacts" element={<ContactForm />} /> */}

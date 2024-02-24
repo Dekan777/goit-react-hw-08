@@ -4,7 +4,7 @@ import { signup } from '../../redux/auth/operations';
 import RegisterForm from '../RegisterForm/RegisterForm';
 // import { OwnSpinner } from '../Spiner/OwnSpinner';
 
-const SignUpPage = () => {
+const RegisterPage = () => {
   // const authLoading = useSelector(selectAuthLoading);
   // const authError = useSelector(selectAuthError);
 
@@ -20,4 +20,4 @@ const SignUpPage = () => {
   );
 };
 
-export default SignUpPage;
+export default RegisterPage;

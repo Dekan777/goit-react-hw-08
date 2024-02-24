@@ -34,7 +34,7 @@ const AuthBar = () => {
         </li>
         <li className={css.navItem}>
           <NavLink
-            to="/signup"
+            to="/register"
             className={`${css.navAuthLink} ${
               location.pathname === '/signup' ? css.authActive - active : ''
             }`}
