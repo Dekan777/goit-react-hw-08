@@ -2,7 +2,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
 import css from './ContactList.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectVisibleContacts } from '../../redux/selectors';
+import { selectVisibleContacts } from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/operations';
 
 import { IconContext } from 'react-icons';

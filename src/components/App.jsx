@@ -9,7 +9,7 @@ import {
   selectContacts,
   selectIsLoading,
   selectError,
-} from '../redux/selectors';
+} from '../redux/contacts/selectors';
 
 import './App.css';
 
