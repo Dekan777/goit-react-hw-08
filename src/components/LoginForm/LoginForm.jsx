@@ -1,6 +1,6 @@
 import { Formik, Field, Form } from 'formik';
 
-const LoginPage = () => {
+const LoginForm = () => {
   return (
     <div>
       <h1>Contact Us</h1>
@@ -21,4 +21,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default LoginForm;

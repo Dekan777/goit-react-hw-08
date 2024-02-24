@@ -16,9 +16,10 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import './App.css';
 import RestrictedRoute from './RestrictedRoute';
-import LoginPage from './LoginPage/LoginPage';
-import RegisterPage from './RegisterPage/RegisterPage';
+// import LoginPage from './LoginPage/LoginPage';
 import PrivateRoute from './PrivateRoute';
+import RegisterForm from './RegisterForm/RegisterForm';
+import LoginForm from './LoginForm/LoginForm';
 
 export const App = () => {
   // const contacts = useSelector(selectContacts);
@@ -36,29 +37,12 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route element={<RestrictedRoute />}>
+            <Route path="login" element={<LoginForm />} />
+            <Route path="register" element={<RegisterForm />} />
+          </Route>
+          <Route element={<PrivateRoute />}></Route>
         </Route>
-        <Route element={<RestrictedRoute />}>
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegisterPage />} />
-        </Route>
-        <Route element={<PrivateRoute />}>
-          {/* <Route path="contacts" element={<ContactForm />} /> */}
-        </Route>
-
-        {/* <Phonebook text="Phonebook" />
-
-      <ContactForm />
-      {contacts.length < 1 ? (
-        ''
-      ) : (
-        <>
-          <SearchBox />
-          <ContactList />
-        </>
-      )}
-      <div style={{ textAlign: 'center' }}>
-        {isLoading && !error && <b>Request in progress...</b>}
-      </div> */}
       </Routes>
     </div>
   );
