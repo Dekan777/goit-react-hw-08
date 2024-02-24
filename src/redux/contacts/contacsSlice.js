@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addContact, deleteContact } from '../contacts/operations'
+import { fetchContacts, addContact, deleteContact } from '../contacts/operations';
 
 const handlePending = state => {
     state.isLoading = true;
@@ -16,7 +16,7 @@ const initialState = {
     error: null,
 };
 
-export const contacsSlice = createSlice({
+const contacsSlice = createSlice({
     name: 'contacts',
     initialState,
     extraReducers: builder => {
@@ -47,7 +47,4 @@ export const contacsSlice = createSlice({
     },
 });
 
-
-
-export const contactsReducer = contacsSlice.reducer;
-
+export default contacsSlice.reducer;
