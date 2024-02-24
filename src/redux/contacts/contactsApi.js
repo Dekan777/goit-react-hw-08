@@ -1,4 +1,4 @@
-import instance from '../auth/auth-api';
+import instance from '../auth/authApi';
 
 export const reqGetContacts = async () => {
     const response = await instance.get('/contacts');
