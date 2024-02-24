@@ -30,6 +30,7 @@ export const store = configureStore({
         filter: filterReducer,
         auth: persistedAuthReducer,
     },
+
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware({
             serializableCheck: {
