@@ -2,7 +2,7 @@ import Phonebook from './Phonebook/Phonebook';
 import ContactList from './ContactList/ContactList';
 import SearchBox from './SearchBox/SearchBox';
 import ContactForm from './ContactForm/ContactForm';
-import { fetchContacts } from '../redux/operations';
+import { fetchContacts } from '../redux/contacts/operations';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {

@@ -3,7 +3,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import css from './ContactList.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectVisibleContacts } from '../../redux/contacts/selectors';
-import { deleteContact } from '../../redux/operations';
+import { deleteContact } from '../../redux/contacts/operations';
 
 import { IconContext } from 'react-icons';
 import { IoClose } from 'react-icons/io5';
