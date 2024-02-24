@@ -18,6 +18,9 @@ const AuthBar = () => {
   return (
     <div className={css.conteiner}>
       <ul className={css.navAuth}>
+        <NavLink className={css.navAuthLink} to="/">
+          Home
+        </NavLink>
         <li className={css.navItem}>
           <NavLink
             to="/login"
