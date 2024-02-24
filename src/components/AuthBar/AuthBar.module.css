@@ -1,10 +1,15 @@
+/* AuthBar.module.css */
 .navAuth {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Align to the right */
   align-items: center;
   gap: 15px;
-  padding: 15px;
+  padding-bottom: 100px;
+}
+
+.navAuthRight {
+  margin-left: auto; /* Push the list to the right */
 }
 
 .navItem {
@@ -14,10 +19,17 @@
   font-size: 24px;
 }
 
+/* Эффект при ховере */
+/* Эффект при ховере */
 .navAuthLink:hover {
-  color: aquamarine;
+  color: #3498db; /* Мягкий голубой цвет текста при ховере */
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.8); /* Тень текста при ховере */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход цвета и тени */
 }
 
+/* Эффект при активном состоянии */
 .authActive {
-  color: aquamarine;
+  color: #2980b9; /* Мягкий голубой цвет текста в активном состоянии */
+  text-shadow: 0 0 15px rgba(41, 128, 185, 0.9); /* Тень текста в активном состоянии */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход цвета и тени */
 }
