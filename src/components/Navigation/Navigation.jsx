@@ -2,7 +2,6 @@ import UserMenu from '../../components/UserMenu/UserMenu';
 import AuthBar from '../../components/AuthBar/AuthBar';
 import { useSelector } from 'react-redux';
 import { selectAuthLogin } from '../../redux/auth/selectors';
-import './Navigation.css';
 
 const Navigation = () => {
   const isLogin = useSelector(selectAuthLogin);

@@ -1,4 +1,4 @@
-.nav_auth {
+.navAuth {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -7,17 +7,17 @@
   padding: 15px;
 }
 
-.nav_auth-link-item {
+.navItem {
 }
 
-.nav_auth-link {
+.navAuthLink {
   font-size: 24px;
 }
 
-.nav_auth-link:hover {
+.navAuthLink:hover {
   color: aquamarine;
 }
 
-.auth_is-active {
+.authActive {
   color: aquamarine;
 }
