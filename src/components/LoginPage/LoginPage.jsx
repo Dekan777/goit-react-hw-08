@@ -12,7 +12,7 @@ const LoginPage = () => {
         }}
       >
         <Form>
-          <Field name="name" type="text" />
+          <Field name="pasword" type="text" />
           <Field name="email" type="email" />
           <button type="submit">Submit</button>
         </Form>
