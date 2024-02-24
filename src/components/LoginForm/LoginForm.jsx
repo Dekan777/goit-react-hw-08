@@ -3,7 +3,6 @@ import { Formik, Field, Form } from 'formik';
 const LoginForm = () => {
   return (
     <div>
-      <h1>Contact Us</h1>
       <Formik
         initialValues={{ name: '', email: '' }}
         onSubmit={async values => {
@@ -12,9 +11,17 @@ const LoginForm = () => {
         }}
       >
         <Form>
-          <Field name="pasword" type="text" />
-          <Field name="email" type="email" />
-          <button type="submit">Submit</button>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <Field name="name" type="text" id="name" />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <Field name="email" type="email" id="email" />
+          </div>
+
+          <button type="submit">Log In</button>
         </Form>
       </Formik>
     </div>
