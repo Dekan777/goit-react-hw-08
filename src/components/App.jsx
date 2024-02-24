@@ -15,6 +15,10 @@ import { useSelector, useDispatch } from 'react-redux';
 // } from '../redux/contacts/selectors';
 
 import './App.css';
+import RestrictedRoute from './RestrictedRoute';
+import LoginPage from './LoginPage/LoginPage';
+import SignUpPage from './SignUpPage/SignUpPage';
+import PrivateRoute from './PrivateRoute';
 
 export const App = () => {
   // const contacts = useSelector(selectContacts);
@@ -32,6 +36,13 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
+        </Route>
+        <Route element={<RestrictedRoute />}>
+          <Route path="login" element={<LoginPage />} />
+          <Route path="signup" element={<SignUpPage />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          {/* <Route path="contacts" element={<ContactForm />} /> */}
         </Route>
 
         {/* <Phonebook text="Phonebook" />

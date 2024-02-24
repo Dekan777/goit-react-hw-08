@@ -5,11 +5,8 @@ import { selectAuthLogin } from '../../redux/auth/selectors';
 
 const Navigation = () => {
   const isLogin = useSelector(selectAuthLogin);
-  console.log(isLogin);
-  return (
-    // <nav className="navbar_menu">{isLogin ? <UserMenu /> : <AuthBar />}</nav>
-    <nav>{isLogin ? <UserMenu /> : <AuthBar />}</nav>
-  );
+
+  return <nav>{isLogin ? <UserMenu /> : <AuthBar />}</nav>;
 };
 
 export default Navigation;

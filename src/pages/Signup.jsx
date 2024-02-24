@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-import RegisterPage from '../components/Register/RegisterPage';
+import RegisterPage from '../components/SignUpPage/SignUpPage';
 
 export default function Login() {
   return (
