@@ -16,36 +16,38 @@ const AuthBar = () => {
   };
 
   return (
-    <ul className={css.navAuth}>
-      <li className={css.navItem}>
-        <NavLink
-          to="/login"
-          className={`${css.navAuthLink} ${
-            active ? css.authActive - active : ''
-          }`}
-          onClick={() => {
-            handleToggleLink();
-            handleClearError();
-          }}
-        >
-          Login
-        </NavLink>
-      </li>
-      <li className={css.navItem}>
-        <NavLink
-          to="/signup"
-          className={`${css.navAuthLink} ${
-            location.pathname === '/signup' ? css.authActive - active : ''
-          }`}
-          onClick={() => {
-            setActive(false);
-            handleClearError();
-          }}
-        >
-          Register
-        </NavLink>
-      </li>
-    </ul>
+    <div className={css.conteiner}>
+      <ul className={css.navAuth}>
+        <li className={css.navItem}>
+          <NavLink
+            to="/login"
+            className={`${css.navAuthLink} ${
+              active ? css.authActive - active : ''
+            }`}
+            onClick={() => {
+              handleToggleLink();
+              handleClearError();
+            }}
+          >
+            Login
+          </NavLink>
+        </li>
+        <li className={css.navItem}>
+          <NavLink
+            to="/signup"
+            className={`${css.navAuthLink} ${
+              location.pathname === '/signup' ? css.authActive - active : ''
+            }`}
+            onClick={() => {
+              setActive(false);
+              handleClearError();
+            }}
+          >
+            Register
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 };
 

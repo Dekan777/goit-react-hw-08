@@ -5,7 +5,6 @@
   justify-content: flex-end; /* Align to the right */
   align-items: center;
   gap: 15px;
-  padding-bottom: 100px;
 }
 
 .navAuthRight {
@@ -19,17 +18,20 @@
   font-size: 24px;
 }
 
-/* Эффект при ховере */
-/* Эффект при ховере */
 .navAuthLink:hover {
-  color: #0a96f4; /* Мягкий голубой цвет текста при ховере */
-  text-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход цвета и тени */
+  color: #0a96f4;
+  /* text-shadow: 0 0 10px #0a96f4; */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Эффект при активном состоянии */
 .authActive {
-  color: #0a96f4; /* Мягкий голубой цвет текста в активном состоянии */
-  text-shadow: 0 0 15px rgba(41, 128, 185, 0.9);
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Плавный переход цвета и тени */
+  color: #0a96f4;
+  /* text-shadow: 0 0 15px #0a96f4; */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.conteiner {
+  border-bottom: 3px solid #0a96f4;
+  margin-bottom: 100px;
+  padding-bottom: 2px;
 }
