@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectAuthError, selectAuthLoading } from '../../redux/auth/selectors';
 import { signup } from '../../redux/auth/operations';
 import css from './RegisterForm.module.css';
+// import { signup } from '../../redux/auth/operations';
 
 import { Formik, Field, Form } from 'formik';
 // import { OwnSpinner } from '../Spiner/OwnSpinner';
@@ -14,33 +15,51 @@ import { Formik, Field, Form } from 'formik';
 // const handleSignup = newUser => dispatch(signup(newUser));
 
 const RegisterForm = () => {
+  const dispatch = useDispatch();
+  const handleSubmit = (values, { resetForm }) => {
+    dispatch(
+      signup({
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      })
+    );
+    resetForm();
+  };
+
   return (
-    <div>
-      <p>SignUp and we will save your contacts for you.</p>
+    <div className={css.registerFormContainer}>
+      <p className={css.signUpMessage}>
+        SignUp and we will save your contacts for you.
+      </p>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
-        onSubmit={async values => {
-          await new Promise(resolve => setTimeout(resolve, 500));
-          alert(JSON.stringify(values, null, 2));
-        }}
+        onSubmit={handleSubmit}
       >
-        <Form>
-          <div className="form-group">
+        <Form className={css.form}>
+          <div className={css.formGroup}>
             <label htmlFor="name">Name</label>
-            <Field name="name" type="text" id="name" />
+            <Field name="name" type="text" id="name" className={css.input} />
           </div>
 
-          <div className="form-group">
+          <div className={css.formGroup}>
             <label htmlFor="email">Email</label>
-            <Field name="email" type="email" id="email" />
+            <Field name="email" type="email" id="email" className={css.input} />
           </div>
 
-          <div className="form-group">
+          <div className={css.formGroup}>
             <label htmlFor="password">Password</label>
-            <Field name="password" type="password" id="password" />
+            <Field
+              name="password"
+              type="password"
+              id="password"
+              className={css.input}
+            />
           </div>
 
-          <button type="submit">Register</button>
+          <button type="submit" className={css.submitButton}>
+            Register
+          </button>
         </Form>
       </Formik>
     </div>
