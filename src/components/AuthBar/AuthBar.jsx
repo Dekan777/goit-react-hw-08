@@ -21,7 +21,8 @@ const AuthBar = () => {
         <NavLink className={css.navAuthLink} to="/">
           Home
         </NavLink>
-        <li className={css.navItem}>
+        <div className={css.nav}>
+          {' '}
           <NavLink
             to="/login"
             className={`${css.navAuthLink} ${
@@ -34,8 +35,6 @@ const AuthBar = () => {
           >
             Login
           </NavLink>
-        </li>
-        <li className={css.navItem}>
           <NavLink
             to="/register"
             className={`${css.navAuthLink} ${
@@ -48,7 +47,7 @@ const AuthBar = () => {
           >
             Register
           </NavLink>
-        </li>
+        </div>
       </ul>
     </div>
   );
