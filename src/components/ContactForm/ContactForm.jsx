@@ -84,7 +84,7 @@ const ContactForm = () => {
         </Form>
       </Formik>
       <SearchBox />
-      {/* <ContactList /> */}
+      <ContactList />
     </div>
   );
 };

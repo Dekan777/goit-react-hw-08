@@ -11,7 +11,6 @@ import { IoClose } from 'react-icons/io5';
 const ContactList = () => {
   const dispatch = useDispatch();
   const filteredContacts = useSelector(selectVisibleContacts);
-  console.log('selectVisibleContacts', selectVisibleContacts);
 
   const handleRemoveContact = contactId => dispatch(deleteContact(contactId));
 
