@@ -1,11 +1,13 @@
-import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contacts/operations';
+import { useDispatch, useSelector } from 'react-redux';
+import { addContact, fetchContacts } from '../../redux/contacts/operations';
+import { selectContacts } from '../../redux/contacts/selectors';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Phonebook from '../../components/Phonebook/Phonebook';
 import ContactList from '../../components/ContactList/ContactList';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import css from './ContactForm.module.css';
+import { useEffect } from 'react';
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -27,6 +29,11 @@ const initialValues = {
 
 const ContactForm = () => {
   const dispatch = useDispatch();
+  // const contacts = useSelector(selectContacts);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   const handleSubmit = (values, { resetForm }) => {
     const { name, number } = values;
