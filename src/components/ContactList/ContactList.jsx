@@ -16,7 +16,7 @@ const ContactList = () => {
 
   return (
     <div className={css.containerAll}>
-      {filteredContacts.map(({ name, phone, id }) => (
+      {filteredContacts.map(({ name, number, id }) => (
         <div className={css.container} key={id}>
           <div className={css.pConteiner}>
             <p className={css.pItem}>
@@ -25,7 +25,7 @@ const ContactList = () => {
             </p>
             <p className={css.par}>
               <FaPhoneAlt className={css.myIcon} />
-              {phone}
+              {number}
             </p>
           </div>
 
