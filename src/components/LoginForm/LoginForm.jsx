@@ -10,10 +10,7 @@ const LoginForm = () => {
       <Formik
         initialValues={{ email: '', password: '' }}
         onSubmit={async (values, { resetForm }) => {
-          // Dispatch the login action here
           dispatch(login(values));
-
-          // Reset the form after submission
           resetForm();
         }}
       >

@@ -1,16 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { selectAuthError, selectAuthLoading } from '../../redux/auth/selectors';
+import { useDispatch } from 'react-redux';
 import { signup } from '../../redux/auth/operations';
 import css from './RegisterForm.module.css';
 import { Formik, Field, Form } from 'formik';
-// import { OwnSpinner } from '../Spiner/OwnSpinner';
-
-// const authLoading = useSelector(selectAuthLoading);
-// const authError = useSelector(selectAuthError);
-
-// const dispatch = useDispatch();
-
-// const handleSignup = newUser => dispatch(signup(newUser));
 
 const RegisterForm = () => {
   const dispatch = useDispatch();

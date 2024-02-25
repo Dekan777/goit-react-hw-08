@@ -11,6 +11,7 @@ import RestrictedRoute from './RestrictedRoute';
 import PrivateRoute from './PrivateRoute';
 import RegisterForm from './RegisterForm/RegisterForm';
 import LoginForm from './LoginForm/LoginForm';
+import ContactForm from './ContactForm/ContactForm';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,9 @@ export const App = () => {
             <Route path="register" element={<RegisterForm />} />
           </Route>
 
-          <Route element={<PrivateRoute />}></Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="contacts" element={<ContactForm />} />
+          </Route>
         </Route>
       </Routes>
     </div>
