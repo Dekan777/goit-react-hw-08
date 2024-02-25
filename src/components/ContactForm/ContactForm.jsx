@@ -37,7 +37,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <div className={css.cont}>
       <Phonebook text="Phonebook" />
       <Formik
         initialValues={initialValues}

@@ -1,0 +1,31 @@
+.navLink {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #0a96f4;
+  margin-bottom: 40px;
+  padding-bottom: 2px;
+}
+
+.log {
+  display: flex;
+}
+
+.btn {
+  margin-left: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: 1px solid #0a96f4;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  color: #ffffff;
+  /* text-shadow: 0 0 10px #0a96f4; */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  background-color: #1c67b6;
+  border: 1px solid #1c67b6;
+}
