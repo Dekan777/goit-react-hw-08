@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
-import ContactList from '../components/ContactList/ContactList';
+// import ContactList from '../components/ContactList/ContactList';
+import ContactForm from '../components/ContactForm/ContactForm';
 
 export default function Contacs() {
   return (
@@ -8,7 +9,7 @@ export default function Contacs() {
         <title>Your contacs</title>
       </Helmet>
 
-      <ContactList />
+      <ContactForm />
     </>
   );
 }

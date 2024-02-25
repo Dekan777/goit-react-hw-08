@@ -1,17 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
-import HomePage from '../components/HomePage/HomePage';
-// import { fetchContacts } from '../redux/contacts/operations';
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, lazy } from 'react';
+import { useDispatch } from 'react-redux';
 import { current } from '../redux/auth/operations';
 import './App.css';
 import RestrictedRoute from './RestrictedRoute';
-
 import PrivateRoute from './PrivateRoute';
-import RegisterForm from './RegisterForm/RegisterForm';
-import LoginForm from './LoginForm/LoginForm';
-import ContactForm from './ContactForm/ContactForm';
+
+const Login = lazy(() => import('../pages/Login'));
+const HomePage = lazy(() => import('../pages/Home'));
+const RegisterForm = lazy(() => import('../pages/Register'));
+const ContactForm = lazy(() => import('../pages/Contacs'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ export const App = () => {
           <Route index element={<HomePage />} />
 
           <Route element={<RestrictedRoute />}>
-            <Route path="login" element={<LoginForm />} />
+            <Route path="login" element={<Login />} />
             <Route path="register" element={<RegisterForm />} />
           </Route>
 
