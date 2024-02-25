@@ -9,16 +9,16 @@ import { IconContext } from 'react-icons';
 import { IoClose } from 'react-icons/io5';
 
 const ContactList = () => {
-  const filteredContacts = useSelector(selectVisibleContacts);
-  console.log(filteredContacts);
   const dispatch = useDispatch();
+  const filteredContacts = useSelector(selectVisibleContacts);
+  console.log('selectVisibleContacts', selectVisibleContacts);
 
   const handleRemoveContact = contactId => dispatch(deleteContact(contactId));
 
   return (
     <div className={css.containerAll}>
-      {filteredContacts.map(({ name, phone, id, createdAt }) => (
-        <div className={css.container} key={createdAt}>
+      {filteredContacts.map(({ name, phone, id }) => (
+        <div className={css.container} key={id}>
           <div className={css.pConteiner}>
             <p className={css.pItem}>
               <FaUserAlt className={css.myIcon} />
