@@ -17,6 +17,7 @@ export const singupRequest = async req => {
     return response.data;
 };
 
+
 export const loginRequest = async req => {
     const response = await instance.post('/users/login', req);
     setToken(response.data.token);

@@ -2,8 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectAuthError, selectAuthLoading } from '../../redux/auth/selectors';
 import { signup } from '../../redux/auth/operations';
 import css from './RegisterForm.module.css';
-// import { signup } from '../../redux/auth/operations';
-
 import { Formik, Field, Form } from 'formik';
 // import { OwnSpinner } from '../Spiner/OwnSpinner';
 

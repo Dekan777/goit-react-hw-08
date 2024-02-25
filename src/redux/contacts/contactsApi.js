@@ -14,3 +14,5 @@ export const reqRemoveContacts = async id => {
     const response = await instance.delete(`/contacts/${id}`);
     return response.data;
 };
+
+

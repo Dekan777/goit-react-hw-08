@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import HomePage from '../components/HomePage/HomePage';
-import { fetchContacts } from '../redux/contacts/operations';
+// import { fetchContacts } from '../redux/contacts/operations';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import { current } from '../redux/auth/operations';
 import './App.css';
 import RestrictedRoute from './RestrictedRoute';
 
@@ -16,7 +16,7 @@ export const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(current());
   }, [dispatch]);
 
   return (
