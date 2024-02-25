@@ -13,3 +13,18 @@
 .btn {
   margin-top: 10px;
 }
+.btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: 1px solid #0a96f4;
+  border-radius: 3px;
+  height: 25px;
+}
+
+.btn:hover {
+  color: #ffffff;
+  /* text-shadow: 0 0 10px #0a96f4; */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  background-color: #1c67b6;
+  border: 1px solid #1c67b6;
+}
