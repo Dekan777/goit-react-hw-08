@@ -1,15 +1,15 @@
+/* YourComponent.css */
+
 .form-group {
   margin-bottom: 20px;
 }
 
-label {
+.label {
   display: block;
-  margin-bottom: 5px;
+
   font-weight: bold;
 }
 
-input,
-button {
-  padding: 8px;
-  margin-bottom: 10px;
+.btn {
+  margin-top: 10px;
 }
