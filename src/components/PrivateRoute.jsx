@@ -17,5 +17,5 @@ const PrivateRoute = () => {
 
   return <Outlet />;
 };
-// df
+// d
 export default PrivateRoute;
